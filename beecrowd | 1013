@@ -1,0 +1,45 @@
+O Maior
+Adaptado por Neilor Tonin, beecrowd  Brasil
+
+Timelimit: 1
+Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”. Utilize a fórmula:             MaiorAB = (a+b+abs(a-b))
+Obs.: a fórmula apenas calcula o maior entre os dois primeiros (a e b). Um segundo passo, portanto é necessário para chegar no resultado esperado.            ____________    
+Entrada:                                                                                                                                                            2
+O arquivo de entrada contém três valores inteiros.
+
+Saída
+Imprima o maior dos três valores seguido por um espaço e a mensagem "eh o maior".
+
+Exemplos de Entrada	Exemplos de Saída
+7 14 106             106 eh o maior
+
+217 14 6             217 eh o maior
+#####################################################################################################################################################################################################################
+Código:
+
+import java.io.IOException;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	
+    int a = scanner.nextInt();
+    int b = scanner.nextInt();
+    int c = scanner.nextInt();
+    
+    if(a>b && c<b || a>b && c<a)
+	{	
+	System.out.println(a +" eh o maior");
+	}
+	 else if(b>c && a<c || b>c && c<b)
+	{	
+	System.out.println(b +" eh o maior");
+	}
+	 else
+	{	
+	System.out.println(c +" eh o maior");
+	}
+	
+	}
+}
